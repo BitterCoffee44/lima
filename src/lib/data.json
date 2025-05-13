@@ -1,0 +1,36 @@
+{
+  "books": [
+    {
+      "id": "kldjflsdj",
+      "bookTitle": "The Adventure of JC",
+      "bookAuthor": "John Clifford",
+      "bookGenre": "Adventure",
+      "bookPublicationDate": 2023,
+      "bookStatus": "Borrowed"
+    },
+    {
+      "id": "jasd7fljsd",
+      "bookTitle": "The Legend of the Black Man",
+      "bookAuthor": "Ryan Tamayo",
+      "bookGenre": "Horror",
+      "bookPublicationDate": 2003,
+      "bookStatus": "Available"
+    },
+    {
+      "id": "897d90sfhds",
+      "bookTitle": "ESP 32 Based Library Management",
+      "bookAuthor": "John Clifford, John Michael Obligar",
+      "bookGenre": "Research",
+      "bookPublicationDate": 2025,
+      "bookStatus": "Available"
+    },
+    {
+      "id": "lkjdfga8u",
+      "bookTitle": "Red Dead Man",
+      "bookAuthor": "(None)",
+      "bookGenre": "Western",
+      "bookPublicationDate": 1990,
+      "bookStatus": "Borrowed"
+    }
+  ]
+}
