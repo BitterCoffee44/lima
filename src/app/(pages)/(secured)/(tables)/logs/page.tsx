@@ -7,7 +7,6 @@ import React, { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
 import { logsColumns } from "./columns";
 import { CalendarPicker } from "@/components/Calendar";
-import { yearsToDays } from "date-fns";
 
 const database = getDatabase(firebaseApp);
 const date = new Date();
@@ -43,10 +42,17 @@ export default function DemoPage() {
   }, [date]);
 
   useEffect(() => {
-    const uniqueArray = Array.from(
-      new Set(data?.map((o) => JSON.stringify(o)))
-    ).map((str) => JSON.parse(str));
-    setLogs(uniqueArray);
+    if (data) {
+      const removeNull = data?.filter((a) => a.timeIn != undefined);
+      const sortedData = removeNull?.sort((a, b) =>
+        b.timeIn.localeCompare(a.timeIn)
+      );
+      console.log(data);
+      const uniqueArray = Array.from(
+        new Set(sortedData?.map((o) => JSON.stringify(o)))
+      ).map((str) => JSON.parse(str));
+      setLogs(uniqueArray);
+    }
   }, [data]);
 
   if (error)
